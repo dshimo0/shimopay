@@ -50,4 +50,4 @@ Residual dependency advisories are recorded below. Do not treat this prototype a
 
 ## Publication status
 
-Source prepared and reviewed locally. GitHub repository creation was refused by the connected integration: `Resource not accessible by integration (createRepository)`. Publication is pending creation of an empty public `dshimo0/shimopay` repository by the owner. The existing private source repositories were not changed.
+The owner created the public repository at https://github.com/dshimo0/shimopay. This reviewed snapshot is prepared for its main branch; the original private repositories remain unchanged. ShimoPay Mobile (`mobile/`) is the primary product; the Solana protocol is included for technical review.

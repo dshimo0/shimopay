@@ -1,4 +1,4 @@
-# ShimoPay
+# ShimoPay Mobile
 
 **Payments that don’t stop when the network does.**
 
