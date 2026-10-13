@@ -47,3 +47,7 @@ Residual dependency advisories are recorded below. Do not treat this prototype a
 - Live hosted demo depends on RPC/provider availability and test funds.
 - Mobile source is PT-BR; pitch supports PT-BR/EN-US.
 - No open-source license was added; third-party licenses are unchanged.
+
+## Publication status
+
+Source prepared and reviewed locally. GitHub repository creation was refused by the connected integration: `Resource not accessible by integration (createRepository)`. Publication is pending creation of an empty public `dshimo0/shimopay` repository by the owner. The existing private source repositories were not changed.
