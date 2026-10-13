@@ -1,0 +1,19 @@
+{
+  "cluster": "devnet",
+  "program": "9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg",
+  "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+  "consumer": "BXZsykJqowbQGSsWv8o4u7g5qjZLKgGwAm5ibgbT5io4",
+  "merchant": "AKHqepJYQZf8eb5ViSZhzEpY2DigGmGSkvA3M1qDDZ8N",
+  "reserve": "6ALcjFgtB9GboxJgBT3HNXbkex3rJkSQ6rsZYhN9XJWs",
+  "vault": "GDFC5KCT3qrGRjrbEF6szb2AaF9iK3YosxT8EHstM1Cx",
+  "network": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+  "generation": "2026-10-12T02:49:25.513Z",
+  "rpcUrl": "https://api.devnet.solana.com",
+  "assetKind": "circle-devnet-usdc",
+  "fxSigner": "14hd6uYLBhUt8nGhSXgUD4v3EkjWc2xod7HxwBUPCrmy",
+  "offlineReserveAmount": "10000000",
+  "offlineAllowanceAmount": "10000000",
+  "deploymentSignature": "4VzZwV2zEzkuJkBnkmZjBfJemfr1nn4BgmH4c8iHgGv76XWBZGHxStKhoaHBKrNy6J6vUm724jBNHniuxe1cfHyr",
+  "checkedAt": "2026-10-12T03:04:47.839Z",
+  "source": "Hosted public deployment metadata"
+}

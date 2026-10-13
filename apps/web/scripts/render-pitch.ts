@@ -1,0 +1,10 @@
+import {renderToStaticMarkup} from 'react-dom/server';
+import {readFile,writeFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import React from 'react';
+import Pitch from '../app/pitch/Pitch';
+const css=await readFile(resolve('apps/web/app/pitch/pitch.css'),'utf8');
+const script=`document.addEventListener('click',async(event)=>{const target=event.target instanceof Element?event.target:null;if(target?.closest('[data-print-pitch]')){window.print();return;}const link=target?.closest('[data-open-demo]');if(!link)return;event.preventDefault();const links=[...document.querySelectorAll('[data-open-demo]')],status=document.getElementById('pitch-launch-status');if(links.some(el=>el.getAttribute('aria-disabled')==='true'))return;links.forEach(el=>el.setAttribute('aria-disabled','true'));status.textContent='Preparando a demo… A retomada pode levar cerca de um minuto.';try{const response=await fetch('/api/start-demo',{method:'POST'}),data=await response.json();if(!response.ok)throw new Error(data.error||'Falha ao iniciar a demo');const url=new URL(data.url);if(url.protocol!=='https:'||!url.hostname.endsWith('.vercel.run'))throw new Error('Endereço da demo inválido');location.assign(url.href);}catch(error){status.textContent=error instanceof Error?error.message:'Falha ao iniciar a demo';links.forEach(el=>el.removeAttribute('aria-disabled'));status.scrollIntoView({block:'center',behavior:'smooth'});}});`;
+const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ShimoPay — Pitch deck</title><meta name="description" content="Identidade, autorização offline e escrow programável. Conheça a tese, o produto e o modelo de negócio do ShimoPay."><meta name="theme-color" content="#153d33"><style>body{margin:0} ${css}</style></head><body>${renderToStaticMarkup(React.createElement(Pitch))}<script>${script}</script></body></html>`;
+await Promise.all(['index.html','pitch.html'].map(file=>writeFile(resolve('apps/demo-launcher/public',file),html)));
+console.log('Pitch published assets generated from the shared React page.');

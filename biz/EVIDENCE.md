@@ -1,0 +1,31 @@
+# Evidence ledger
+
+Pesquisado em 10–11 outubro 2026. Fonte, data e limite acompanham cada claim. **Alta confiança no texto publicado não significa validação do ShimoPay.** A/B/C/D/F classificam problema/demanda em VALIDATION.md. Métricas locais são técnicas e não estimativas de mercado.
+
+| ID / Claim | Evidence | Source / date / URL | Confidence | What exactly it proves / does not prove | Pitch usage |
+| --- | --- | --- | --- | --- | --- |
+| E01 Outages podem impedir checkout | Fed discute outages de processadores e opções offline | Federal Reserve, 16 Aug 2024: [FEDS Notes](https://www.federalreserve.gov/econres/notes/feds-notes/offline-payments-implications-for-reliability-and-resiliency-in-digital-payment-systems-20240816.html) | Alta, C | Problema existe; não mede perda em festivais brasileiros | Qualitativo; sem extrapolar incidente para TAM |
+| E02 Offline acceptance já existe | Braintree documenta store-and-forward e limites de risco | PayPal/Braintree, docs sem data editorial: [Offline transactions](https://developer.paypal.com/braintree/in-person/legacy/guides/offline-transactions/) | Alta, B | Alternativa real; não confirma suporte de todo adquirente/local | Admitir concorrência |
+| E03 Ambos dispositivos podem trocar ecash offline | Fedi mostra pending até reissue com conexão | Fedi docs, sem data editorial: [Ecash](https://fedibtc.github.io/fedi-docs/docs/fedi/payments/ecash/) | Alta | Refuta novidade de offline + later reconciliation; confiança diferente | Não usar claim “first” |
+| E04 Offline design envolve riscos estruturais | Handbook/guide Polaris | BIS, 11 May / 26 Oct 2023: [Project Polaris](https://www.bis.org/project/polaris) | Alta, C | Design/risk/security precisam análise; não prova demanda comercial | Risco explicitado |
+| E05 Acesso digital é amplo, desigual | Findex 2025 mede contas e conectividade; 86% adultos com telefone, 68% com smartphone | World Bank, 16 Jul 2025, dados 2024: [release](https://www.worldbank.org/en/news/press-release/2025/07/16/mobile-phone-technology-powers-saving-surge-in-developing-economies) | Alta, C | Potencial de distribuição móvel; não mede outages nem SOM | Contexto opcional, não base do business case |
+| E06 Stablecoins têm infraestrutura merchant | Stripe anuncia stablecoins com Shopify e settlement local | Stripe, 12 Jun 2025: [announcement](https://stripe.com/newsroom/news/shopify-stripe-stablecoin-payments) | Alta, B; comercial | Movimento de distribuição; não comprova adoção individual nem integração ShimoPay | Why now qualitativo |
+| E07 Stablecoin supply/volume cresceram | Circle divulga 73.3bn USDC no fim Q2 2026; on-chain volume inclui muito além de retail | Circle, resultados Q2 2026, publicado Aug 2026: [results](https://www.circle.com/pressroom/circle-reports-second-quarter-2026-results?trk=article-ssr-frontend-pulse_little-text-block) | Média/alta, issuer reporting | Escala do asset, não TPV merchant nem mercado endereçável ShimoPay | Evitar volume no pitch |
+| E08 Delegated wallet UX é implementável | EIP-7702 descreve delegation e riscos de initialization | Ethereum EIP, documento vivo: [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) | Alta | Ferramentas existem; MVP não usa AA completa nem depende dela | Arquitetura futura |
+| E09 Custos variam por rail/carga | Solana documenta 5,000 lamports/signature mais priority fee | Solana docs, sem data editorial: [Fee structure](https://solana.com/docs/core/fees/fee-structure) | Alta | Fee base protocolar, não custo USD garantido nem benchmark ShimoPay | Não prometer cheap settlement em L1 Ethereum |
+| E10 Offline digital euro é área de pesquisa ativa | ECB discute offline e double-spend controls | ECB, Jun 2024: [preparation report](https://www.ecb.europa.eu/euro/digital_euro/progress/html/ecb.deprp202406.es.html) | Alta, C | Offline não é novo; CBDC envolve modelo distinto | Competition/threats |
+| E11 Stablecoin/câmbio no Brasil exigem análise atual | BC publica regras 519/520/521 e perímetro de serviços | BCB, Nov 2025 / vigência 2026: [nota](https://www.bcb.gov.br/detalhenoticia/20918/nota?s=08), [Res.520](https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?numero=520&tipo=resolu%C3%A7%C3%A3o+bcb) | Alta no texto; aplicação específica pendente | Regime existente; não é parecer jurídico ou licença do projeto | Uma frase de readiness regulatório |
+| E12 World's Fair é multichain | Página oficial e regras incluem Ethereum e Solana | Colosseum, regras 2026: [event](https://colosseum.com/worldsfair), [rules](https://colosseum.com/legal/Crypto%20World%27s%20Fair%20Hackathon%20Rules.pdf) | Alta | Não precisa trocar EVM para competir no evento; não habilita prêmio Solana sem integrar Solana | Track adequada; confirmar formulário |
+| E13 Concorrentes históricos de pagamentos existem | Resultados Radar/Breakout nomeiam equipes | Colosseum, 12 Nov 2024 / 2 Jul 2025: [Radar](https://blog.colosseum.com/announcing-the-winners-of-the-solana-radar-hackathon/), [Breakout](https://blog.colosseum.com/announcing-the-winners-of-the-solana-breakout-hackathon/) | Alta para premiações | Prize não é survival, PMF ou offline capability | Benchmark, nunca superiority |
+
+## Claims não autorizados pela evidência
+
+“Offline double spending solved”; “first offline crypto payments”; “DID proves real-world identity”; “fiat settled”; “multi-chain deployed”; “thousands of merchants”; “market worth trillions”; “regulation exempt”; “audited”; “IP protected”; “Colosseum approved”.
+
+## Gaps atuais
+
+Taxa de outage e perda por merchant-evento; disposição de pagar; funding/payout com parceiro; underwriting; event counts e vendors/event reais; founder bio; novidade exaustiva e liberdade de operação. Nenhum deve ser preenchido com número de stablecoin supply.
+
+## Founder evidence — user supplied
+
+E14:25 years security; SME insurer LATAM;20+ IAM deliveries;2mi+ identities; Naapi insurance/Distrito hackathon win using DLT; China visit invited by Alibaba. Source: founder message11 October2026. Confidence: user-reported, not independently verified. Supports relevant experience and insight origin, not partner endorsement, ShimoPay traction or measured commercial outcomes. Exact hackathon name/date/award proof pending.

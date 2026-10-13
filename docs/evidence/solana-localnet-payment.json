@@ -1,0 +1,21 @@
+{
+  "cluster": "localnet",
+  "program": "9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg",
+  "mint": "HumsZKeRVro2KmPmJQ5osm9B6EETGfiqrMysghgqJTPJ",
+  "consumer": "BXZsykJqowbQGSsWv8o4u7g5qjZLKgGwAm5ibgbT5io4",
+  "merchant": "AKHqepJYQZf8eb5ViSZhzEpY2DigGmGSkvA3M1qDDZ8N",
+  "reserve": "7NT1EguvsvX1Vyw6HQAjwAzThH2u3Rzjre1xWf8iPF3E",
+  "vault": "7vFDai45tnemPpqkdjkxpXgCaseUX7aVYwgLK7V5RBDi",
+  "network": "JBEjsrR82bFRkR5EDyYLuc9arBamYDkjCPCK7B5vZZEq",
+  "generation": "2026-10-11T18:13:21.622Z",
+  "rpcUrl": "http://127.0.0.1:8899",
+  "deploymentSignature": "4WKiUwoBDeLcG2Ytke39HZdes45WWYe7z7vV1a25xUjX2nVPymwAJWvM8t6sbMmNUPG7a8MNh8JaG7wxrpJwkzqj",
+  "reserveTransaction": "3otmpv6SNqDQkm1M9EwktiJmHp7Je89z5P1MQvLxmFzLrDLdiQMkzrMCeW17zGWydSyEsCvJsiWUo9YsNd94aWa",
+  "allowanceTransaction": "2oUi89HHY3jArhn2idojyYYWR24inY4kphvKNGcmeRjrFm2UAh9zv9KkUvZ21e6QJBQjS7LmyN9GZTXkHwn6ecsP",
+  "settlementTransaction": "3euPfavTnqWYLKDQBorQ6AEVjnq1h1meyaUs8Pr4MFZ9AUEiZawa8PF18L8eRCHgzYKn5ixmhjFHiywBBhzWeHRU",
+  "allowance": "AbTNx4ycs7kbJsTU4Rz2P1ykpmcA2L7WEKkZQx3EjYbp",
+  "receipt": "8bexDcf3uRzSCrRkDqMC41Ci6WTvZGWiDf7hHUhkNL6h",
+  "merchantDelta": "4545455",
+  "replayRejected": true,
+  "executedAt": "2026-10-11T18:13:46.860Z"
+}

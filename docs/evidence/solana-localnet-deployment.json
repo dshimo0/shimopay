@@ -1,0 +1,13 @@
+{
+  "cluster": "localnet",
+  "program": "9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg",
+  "mint": "3kMTgQbrywn1MtfQZkFbdVVf7W19FmxLsVb2EfBRsJ6R",
+  "consumer": "BXZsykJqowbQGSsWv8o4u7g5qjZLKgGwAm5ibgbT5io4",
+  "merchant": "AKHqepJYQZf8eb5ViSZhzEpY2DigGmGSkvA3M1qDDZ8N",
+  "reserve": "87DtNgiNZo7ehPb8gdgi5dzi5YET6pbURfpn6EaX1NA2",
+  "vault": "3ToCBFjhsay9UnsDDjkhmaKibRM6PYHyyFp6e7JMfzAX",
+  "network": "JBEjsrR82bFRkR5EDyYLuc9arBamYDkjCPCK7B5vZZEq",
+  "generation": "2026-10-11T18:16:05.666Z",
+  "rpcUrl": "http://127.0.0.1:8899",
+  "reserveInitialization": "LN2tzwRyBkS8byCeK5y9bs6V5VJYJmHWEvKGKPYr4TXvUte9BCzwX5cwBKD2PDnZwvAWY7Ka5ohtqnX7RcrtoMT"
+}

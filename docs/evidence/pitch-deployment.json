@@ -1,0 +1,9 @@
+{
+  "productionUrl": "https://shimopay-demo.vercel.app",
+  "pitchUrl": "https://shimopay-demo.vercel.app/pitch.html",
+  "pdfUrl": "https://shimopay-demo.vercel.app/shimopay-pitch.pdf",
+  "deploymentId": "dpl_EUs1cg95CKZ5zLMRbvvbsDaEA67n",
+  "publicBrowserVerification": "passed: desktop/mobile/PDF/launch error recovery",
+  "pdfPages": 11,
+  "devnet": "pending test SOL, not deployed"
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "authentication": {
+    "endpoint": "GET /users/me",
+    "http": 200,
+    "matchesConfiguredSeller": true,
+    "testUser": true
+  },
+  "buyerLookup": {
+    "endpoint": "GET /users/3758554146",
+    "http": 200,
+    "emailReturned": false,
+    "configuredEmailVerifiedByProvider": false
+  },
+  "pixCreation": {
+    "endpoint": "POST /v1/payments",
+    "http": 401,
+    "error": "unauthorized",
+    "code": 7,
+    "recognizedMessage": "Unauthorized use of live credentials",
+    "qrReturned": false
+  },
+  "conclusion": "The same credential authenticates the expected test seller and successfully creates test Orders (HTTP 201). The published adapter now uses Orders, not Payments. Creation, status lookup and idempotent retry succeed in the browser; the provider continues returning processing/in_process without QR. Missing payment scope was a documented explanation of Payments 401, not proof that this credential cannot create orders. Pix QR issuance and approval remain unverified.",
+  "secretsIncluded": false,
+  "officialReference": {
+    "url": "https://www.mercadopago.com.br/developers/pt/reference/online-payments/subscriptions/create-payment/post",
+    "source": "Official reference text pasted by the user",
+    "endpoint": "POST /v1/payments",
+    "errorExplanation": "This 401 occurs when the access token lacks the required payment scope."
+  },
+  "ordersProbe": {
+    "endpoint": "POST /v1/orders",
+    "http": 201,
+    "id": "ORDTST01M4QATH7DMCM10M71PCVTY2SJ",
+    "status": "processing",
+    "statusDetail": "in_process"
+  },
+  "applicationRead": {
+    "http": 200,
+    "scopes": [
+      "read",
+      "offline_access",
+      "write"
+    ]
+  }
+}

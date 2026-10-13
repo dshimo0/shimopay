@@ -1,0 +1,13 @@
+{
+  "url": "https://sb-3ep2qj5yh459.vercel.run/demo",
+  "signature": "5h9q2ZGoqmP5KgxogiSs5KFkgV9Nr2uSxH1b9LzbaLoF1wmjVV5hFUSBRaEg4btRM17fygkW1U6e5o53LnnPa18C",
+  "checkedAt": "2026-10-11T23:35:28.405Z",
+  "merchantDelta": "4545455",
+  "walletDebit": "4545455",
+  "escrowUnchanged": true,
+  "idempotentRetry": true,
+  "offlineBlocked": true,
+  "cluster": "localnet",
+  "mint": "9q7mPvvXibCkuob2PM9WEDBFajEpjVLUPFZEHqQEbqwT",
+  "program": "9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg"
+}

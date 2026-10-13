@@ -1,0 +1,11 @@
+import {it} from 'node:test';
+import assert from 'node:assert/strict';
+import {Wallet} from 'ethers';
+import {encryptSessionKey,decryptSessionKey,OfflineWallet} from '../src/storage';
+import {ConnectivityGate,MockFiatRail} from '../src/index';
+it('WebCrypto encrypted key round trip, random salt/IV, no plaintext',async()=>{const key=Wallet.createRandom().privateKey,password='offline-demo-pass';const a=await encryptSessionKey(key,password),b=await encryptSessionKey(key,password);assert.equal(await decryptSessionKey(a,password),key);assert.notDeepEqual(a.iv,b.iv);assert.notDeepEqual(a.salt,b.salt);assert.equal(JSON.stringify(a).includes(key),false);});
+it('wrong password and modified ciphertext rejected',async()=>{const a=await encryptSessionKey(Wallet.createRandom().privateKey,'offline-demo-pass');await assert.rejects(decryptSessionKey(a,'incorrect-password'),/Incorrect/);a.ciphertext[0]^=1;await assert.rejects(decryptSessionKey(a,'offline-demo-pass'),/Incorrect/);});
+it('short password rejected',async()=>{await assert.rejects(encryptSessionKey(Wallet.createRandom().privateKey,'short'),/10 characters/);});
+it('wallet starts locked and signing blocked',()=>{const wallet=new OfflineWallet();assert.throws(()=>wallet.getSigner(),/locked/);wallet.lockOfflineWallet();assert.throws(()=>wallet.getSigner(),/locked/);});
+it('connectivity gate blocks network actions in simulation',()=>{const gate=new ConnectivityGate();gate.setOffline(true);assert.equal(gate.isOnline(),false);assert.throws(()=>gate.assertOnline(),/Offline/);gate.setOffline(false);assert.equal(gate.isOnline(),true);});
+it('mock fiat rail clearly simulates payout state only',async()=>{const rail=new MockFiatRail();assert.throws(()=>rail.complete());await rail.settle({} as never);assert.equal(rail.status,'payout requested');rail.process();rail.complete();assert.equal(rail.status,'payout completed');});

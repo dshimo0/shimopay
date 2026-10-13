@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests',timeout:90_000,workers:1,fullyParallel:false,use:{baseURL:'http://127.0.0.1:3000',headless:true,launchOptions:{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE,args:['--no-sandbox']},trace:'retain-on-failure'},webServer:[{command:'node --import tsx scripts/demo-chain.ts',port:8545,timeout:120_000,reuseExistingServer:!process.env.CI},{command:'pnpm --filter @shimopay/web start',url:'http://127.0.0.1:3000',timeout:120_000,reuseExistingServer:!process.env.CI}]});

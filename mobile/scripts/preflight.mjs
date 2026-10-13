@@ -1,0 +1,6 @@
+const root=process.env.SHIMOPAY_MOBILE_URL??'http://127.0.0.1:8082';
+const configResponse=await fetch(root+'/deployment.json');if(!configResponse.ok)throw new Error('Deployment/backend unavailable');const config=await configResponse.json();
+if(config.cluster!=='devnet'||config.network!=='EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG'||config.mint!=='4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU')throw new Error('Refusing non-Circle Devnet');
+const response=await fetch(root+'/api/solana-demo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'state'})});const state=await response.json();if(!response.ok)throw new Error(state.error);
+const compactDemoFunded=BigInt(state.walletBalance)>=4545455n&&BigInt(state.availableReserve)>=5000000n;
+console.log(JSON.stringify({checkedAt:new Date().toISOString(),root,cluster:config.cluster,mint:config.mint,program:config.program,consumer:config.consumer,merchant:config.merchant,state,compactDemoFunded,message:compactDemoFunded?'Tokens cover 5 USDC session + R$25 online':'Check existing sessions and fund real Circle Devnet USDC; no tokens minted by preflight',scope:'Read-only domain and balance checks; session/cache/fee readiness also needs browser setup'},null,2));

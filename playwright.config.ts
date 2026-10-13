@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests',testMatch:'solana.spec.ts',timeout:120_000,expect:{timeout:30_000},workers:1,fullyParallel:false,use:{baseURL:process.env.SHIMOPAY_DEMO_URL??'http://127.0.0.1:3000',headless:true,launchOptions:{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE??'/usr/bin/chromium',args:['--no-sandbox']},trace:'retain-on-failure'}});

@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-12T21:14:16.481Z",
+  "documents": 13,
+  "localLinks": 69,
+  "acceptanceCriteria": 15,
+  "deliveryMilestones": 10,
+  "businessDeliverables": 6,
+  "failures": [],
+  "passed": true,
+  "scope": "Documentation links and traceability; not financial runtime verification"
+}

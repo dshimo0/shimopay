@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-12T20:42:59.350Z",
+  "session": "8wY45fa5bHAj7RJMZc6yxafVWSNLYn8Z1a1NErzRMFR",
+  "expiresAt": 1791837772,
+  "rejected": true,
+  "reason": "Expired",
+  "cancelSignature": "4VAV1MAdosC7y6FmQFvP12zyverpU38jK153xn6RSXMJKskXy1xSR49GSqPXLHYaJNaxhsFdb3JvYV2g7AfRU4T7",
+  "availableReserveBefore": "2552726",
+  "availableReserveAfter": "2552726",
+  "unusedAllocationReleased": true
+}

@@ -1,0 +1,16 @@
+{
+  "root": "https://shimopay-demo.vercel.app",
+  "checkedAt": "2026-10-12T18:19:48.083Z",
+  "consumerSingleView": true,
+  "merchantSingleView": true,
+  "consumerNavigation": true,
+  "merchantNavigation": true,
+  "settlementActionVisible": true,
+  "mobileOverflow": false,
+  "realOfflineReload": true,
+  "onlinePaymentDisabledOffline": true,
+  "invoiceQrCreated": true,
+  "invoiceImportedOffline": true,
+  "expiredInvoiceRejected": true,
+  "financialMutations": false
+}

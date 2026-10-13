@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-12T22:04:52.975Z",
+  "demoLoginAcceptedWithoutAuth": true,
+  "authRequests": 0,
+  "logoLoaded": true,
+  "qrGenerated": true,
+  "invoiceProtocol": "shimopay-invoice",
+  "invoiceAmountMinor": "2500",
+  "pix": {
+    "http": 200,
+    "status": "approved",
+    "rail": "mercadopago-pix-test"
+  },
+  "scope": "Isolated browser audit. Demo login is not authentication. No purchase, faucet or new charge-provider request. Camera/geolocation/cash/card absent by source inspection."
+}

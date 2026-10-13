@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-13T00:21:50.912Z",
+  "commit": "d5134f8",
+  "root": "https://shimopay-mobile.vercel.app",
+  "pages": [],
+  "errors": [],
+  "balanceText": "≈ R$ 202,48",
+  "balanceSource": "Live Devnet backend; snapshot only",
+  "desktopOverflow": false
+}

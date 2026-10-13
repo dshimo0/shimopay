@@ -1,0 +1,10 @@
+import {createServer} from 'node:http';
+import {readFile,stat} from 'node:fs/promises';
+import {resolve,extname} from 'node:path';
+import bridge from '../api/bridge.mjs';
+import authSession from '../api/auth-session.mjs';
+import transaction from '../api/transaction.mjs';
+const root=resolve('dist');
+const types={'.html':'text/html','.js':'application/javascript','.css':'text/css','.woff':'font/woff','.woff2':'font/woff2','.png':'image/png','.svg':'image/svg+xml','.webmanifest':'application/manifest+json','.ico':'image/x-icon'};
+const server=createServer(async(req,res)=>{try{const url=new URL(req.url,'http://localhost');const resources={'/deployment.json':'deployment','/api/solana-demo':'solana','/api/pix':'pix'};if(resources[url.pathname]){let body='';for await(const piece of req){body+=piece;if(body.length>16384){res.writeHead(413).end();return;}}req.query={resource:resources[url.pathname]};req.body=body?JSON.parse(body):undefined;res.status=code=>{res.statusCode=code;return res;};res.json=data=>{res.setHeader('Content-Type','application/json');res.end(JSON.stringify(data));return res;};return await bridge(req,res);}if(url.pathname==='/api/auth-session'||url.pathname==='/api/transaction'){req.query=Object.fromEntries(url.searchParams);res.status=code=>{res.statusCode=code;return res;};res.json=data=>{res.setHeader('Content-Type','application/json');res.end(JSON.stringify(data));return res;};return await (url.pathname==='/api/transaction'?transaction:authSession)(req,res);}if(url.pathname.startsWith('/api/')){res.writeHead(404).end();return;}let file=resolve(root,'.'+decodeURIComponent(url.pathname));if(!file.startsWith(root+'/'))file=resolve(root,'index.html');try{if(!(await stat(file)).isFile())file=resolve(root,'index.html');}catch{if(url.pathname.startsWith('/assets/')){res.writeHead(404).end();return;}file=resolve(root,'index.html');}res.setHeader('Content-Type',types[extname(file)]??'application/octet-stream');res.end(await readFile(file));}catch{res.writeHead(503).end('Demo server unavailable');}});
+server.listen(Number(process.env.PORT??8080),'0.0.0.0',()=>console.log('ShimoPay Mobile production server ready'));

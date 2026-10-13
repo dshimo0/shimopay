@@ -1,0 +1,26 @@
+{
+  "name": "@shimopay/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --hostname ::",
+    "build": "next build --webpack",
+    "start": "next start --hostname ::"
+  },
+  "dependencies": {
+    "next": "^16.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "qrcode": "^1.5.4",
+    "@shimopay/protocol": "workspace:*",
+    "@shimopay/sdk": "workspace:*",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@shimopay/solana": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/qrcode": "^1.5.6"
+  }
+}

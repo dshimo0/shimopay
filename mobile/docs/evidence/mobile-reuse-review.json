@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-12T18:36:48.671Z",
+  "commit": "c66b08a8e44bcae2cec901a2ceec8abf14b5bff3",
+  "screens": [
+    {
+      "path": "/customer/home",
+      "heading": [
+        "Olá, Review!"
+      ],
+      "horizontalOverflow": false
+    },
+    {
+      "path": "/customer/wallet",
+      "heading": [
+        "Carteira"
+      ],
+      "horizontalOverflow": false
+    },
+    {
+      "path": "/customer/offline",
+      "heading": [
+        "Reserva offline"
+      ],
+      "horizontalOverflow": false
+    },
+    {
+      "path": "/merchant/dashboard",
+      "heading": [
+        "Review customer"
+      ],
+      "horizontalOverflow": false
+    }
+  ],
+  "pageErrors": [],
+  "serviceWorkerRegistrations": 0,
+  "financialMutations": false,
+  "auth": "Local demo fixture; not authenticated against server"
+}

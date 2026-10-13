@@ -1,0 +1,10 @@
+import {readdir,writeFile,readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const files=await readdir('dist/assets');
+const version=createHash('sha256').update(files.join(',')).digest('hex').slice(0,16);
+const assets=['/index.html','/manifest.webmanifest','/brand/app-icon.png',...files.map(f=>`/assets/${f}`)];
+const sw=`const CACHE='shimopay-mobile-${version}';const ASSETS=${JSON.stringify(assets)};
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('shimopay-mobile-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
+self.addEventListener('fetch',event=>{const u=new URL(event.request.url);if(event.request.method!=='GET'||u.origin!==self.location.origin||u.pathname.startsWith('/api/')||u.pathname==='/deployment.json')return;if(event.request.mode==='navigate'){event.respondWith(fetch(event.request).catch(()=>caches.match('/index.html')));return;}if(ASSETS.includes(u.pathname))event.respondWith(caches.match(event.request).then(hit=>hit||fetch(event.request)));});`;
+await writeFile('dist/sw.js',sw);console.log(`PWA ${version}: ${assets.length} assets; API excluded`);

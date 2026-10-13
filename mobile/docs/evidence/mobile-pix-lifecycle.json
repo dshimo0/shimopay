@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-12T20:39:27.360Z",
+  "root": "https://shimopay-mobile.vercel.app",
+  "orderId": "ORDTST01M4RXEQHP18PVGVBSZE46M03Q",
+  "amountMinor": 10000,
+  "rail": "mercadopago-pix-test",
+  "providerApi": "orders",
+  "createdStatus": "pending",
+  "qrReturned": true,
+  "qrImageReturned": true,
+  "qrSha256": "e48045d7c017ee8c572729d834ff8d7814269ebb6dc76d30fcb16105d8a73e99",
+  "finalStatus": "approved",
+  "statusDetail": "accredited",
+  "before": {
+    "balance": "6814541",
+    "merchantBalance": "13185459",
+    "reserveBalance": "6189089",
+    "availableReserve": "2552726",
+    "walletBalance": "625452"
+  },
+  "after": {
+    "balance": "6814541",
+    "merchantBalance": "13185459",
+    "reserveBalance": "6189089",
+    "availableReserve": "2552726",
+    "walletBalance": "625452"
+  },
+  "usdcBalanceUnchanged": true,
+  "approvalSource": "Authenticated Mercado Pago status query, never client simulation"
+}

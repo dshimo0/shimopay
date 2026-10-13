@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-12T20:34:37.216Z",
+  "orders": [
+    {
+      "http": 200,
+      "id": "ORDTST01M4QBX1YHHZ85T74RSDNTPBDH",
+      "status": "approved",
+      "amountMinor": 10000,
+      "currency": "BRL",
+      "rail": "mercadopago-pix-test",
+      "providerApi": "orders",
+      "statusDetail": "accredited",
+      "qrImageReturned": false
+    },
+    {
+      "http": 200,
+      "id": "ORDTST01M4RX10ZQ19JXAVTABZT5E9CY",
+      "status": "approved",
+      "amountMinor": 10000,
+      "currency": "BRL",
+      "rail": "mercadopago-pix-test",
+      "providerApi": "orders",
+      "statusDetail": "accredited",
+      "qrImageReturned": false
+    }
+  ],
+  "source": "Authenticated backend Mercado Pago Orders sandbox; no client approval simulation",
+  "usdcCredited": false
+}

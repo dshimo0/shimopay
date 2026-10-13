@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-12T21:39:58.147Z",
+  "deployment": "dpl_HTpv8aokCkQEebpUPp6HFmiJHhMS",
+  "merge": "0a00f163699b62dd3bac169111977c33533694c3",
+  "routes": [
+    {
+      "route": "/customer/home",
+      "status": 200,
+      "brand": 1
+    },
+    {
+      "route": "/merchant/dashboard",
+      "status": 200,
+      "brand": 1
+    },
+    {
+      "route": "/demo",
+      "status": 200,
+      "brand": 1
+    },
+    {
+      "route": "/pitch",
+      "status": 200,
+      "brand": 1
+    }
+  ],
+  "offlineReload": "OFFLINE",
+  "pageErrors": []
+}

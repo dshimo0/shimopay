@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-11T19:01:46.420Z",
+  "url": "https://sb-3ep2qj5yh459.vercel.run/demo",
+  "cluster": "localnet",
+  "reserve": "28gEkXHNekuBWftN6cieNZzHRunvRR8egqhZxxeGVq6J",
+  "firstSignature": "2Xhu23AEsW3vzwrYscxsk72UVFd7jUWyCfpsYZ3sPtq9uYEcp67k5R517XjqvxWkhKksjDcTQHuWJpmLCpaTbNrp",
+  "entries": [
+    {
+      "signature": "2Xhu23AEsW3vzwrYscxsk72UVFd7jUWyCfpsYZ3sPtq9uYEcp67k5R517XjqvxWkhKksjDcTQHuWJpmLCpaTbNrp",
+      "slot": 8983,
+      "blockTime": 1791745288,
+      "status": "finalized"
+    },
+    {
+      "signature": "2nWFjLxEtSiuzEqMgngekUBwQBSqVsJRYwSN2se51JVWkK42ThSudLpM2UvLYC4b5eMcCtoLyY9HMTKWnXXm6gnS",
+      "slot": 8975,
+      "blockTime": 1791745284,
+      "status": "finalized"
+    },
+    {
+      "signature": "23cfN5YB7bXPV5g63FZVigsdzyft8Lk5BjJhp84bbbhqH3xFRjyG5rQsLNDpCjNavVhFm2AsKxBhPnhux6bxgLNQ",
+      "slot": 8967,
+      "blockTime": 1791745281,
+      "status": "finalized"
+    },
+    {
+      "signature": "3qm7sBrULvTEuH9TDn3xrMf2ZpnCrWP4kZSHmHwK3nLs3e6cn3RkZSmxuTFABHoXfLEvuZ12yJfMjpKBAKYzJWsA",
+      "slot": 8960,
+      "blockTime": 1791745278,
+      "status": "finalized"
+    }
+  ],
+  "recoveryFromRpc": true,
+  "reloadRetainsHistory": true,
+  "offlineRefreshBlocked": true,
+  "publicDevnetProof": false
+}

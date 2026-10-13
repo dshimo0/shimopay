@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-12T20:16:28.783Z",
+  "root": "https://shimopay-mobile.vercel.app",
+  "cluster": "devnet",
+  "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+  "before": {
+    "balance": "8909089",
+    "merchantBalance": "11090911",
+    "reserveBalance": "3636363",
+    "availableReserve": "0",
+    "walletBalance": "5272726"
+  },
+  "after": {
+    "balance": "8905451",
+    "merchantBalance": "11094549",
+    "reserveBalance": "3734544",
+    "availableReserve": "0",
+    "walletBalance": "5170907"
+  },
+  "sessionId": "8HhptuuaZRxwK61ZcXtQsr7edy7YGWkiktH5EVj5ruzk",
+  "displayAmountMinor": "1",
+  "settlementAmountEach": "1819",
+  "onlineExplorer": "https://explorer.solana.com/tx/3keqZmp8tyGhsqLzUiHGV5zHUxtwfSrkHP6TTvsbbZtTG9MM9JrbnPQVRkqpnkZhQGXvAmJQm3op7XkSz1WMzF2M?cluster=devnet",
+  "offlineSignature": "4hJxjypWwnZxLBSxpxHCvjzM1GnaoCaUhu7vouPgE7Mh7rxgyNYrMxDkwEacsNfqkUM2QueDQi8m4M5DANt8EAp2",
+  "confirmedAt": 1791836138,
+  "offlinePwaReload": true,
+  "independentMerchant": true,
+  "payerStillOfflineAtSettlement": true,
+  "offlineApiRequests": 0,
+  "replayRejected": true,
+  "pageErrors": [],
+  "scope": "Bounded live test R$0.01 online and offline; not the full R$25 funding criterion"
+}

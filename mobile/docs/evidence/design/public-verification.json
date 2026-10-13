@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-13T00:20:20.759Z",
+  "commit": "d5134f8",
+  "root": "https://shimopay-mobile.vercel.app",
+  "pages": [
+    {
+      "name": "landing",
+      "status": 200,
+      "height": 2413,
+      "overflow": false
+    },
+    {
+      "name": "wallet",
+      "status": 200,
+      "height": 1236,
+      "overflow": false
+    },
+    {
+      "name": "pay",
+      "status": 200,
+      "height": 1243,
+      "overflow": false
+    },
+    {
+      "name": "offline",
+      "status": 200,
+      "height": 975,
+      "overflow": false
+    },
+    {
+      "name": "merchant",
+      "status": 200,
+      "height": 1166,
+      "overflow": false
+    },
+    {
+      "name": "demo",
+      "status": 200,
+      "height": 1693,
+      "overflow": false
+    },
+    {
+      "name": "auth",
+      "status": 200,
+      "height": 844,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "desktopOverflow": false,
+  "deployment": "dpl_FQ8KH1S46gMzNV5CsxBPYZLFWtX8",
+  "deploymentStatus": "READY",
+  "checks": {
+    "unit": 55,
+    "e2e": 5,
+    "lintErrors": 0,
+    "legacyLintWarnings": 8,
+    "typecheck": "passed",
+    "build": "passed"
+  },
+  "scope": "Visual/navigation verification on public deployment. Screenshots taken shortly after navigation can show loading; financial regression uses local fixtures, no new live transfer in this redesign."
+}

@@ -1,0 +1,25 @@
+{
+  "buildCommand": null,
+  "outputDirectory": "public",
+  "functions": {
+    "api/start-demo.mjs": {
+      "maxDuration": 300
+    },
+    "api/open-app.mjs": {
+      "maxDuration": 300
+    },
+    "api/mobile-backend.mjs": {
+      "maxDuration": 300
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/app",
+      "destination": "/api/open-app?role=consumer"
+    },
+    {
+      "source": "/app/merchant",
+      "destination": "/api/open-app?role=merchant"
+    }
+  ]
+}

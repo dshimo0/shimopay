@@ -1,0 +1,11 @@
+# Mobile integration
+
+ShimoPay Mobile: https://shimopay-mobile.vercel.app. Native Vite consumer/merchant UI consumes the versioned browser protocol and a same-origin Vercel gateway. Backend here remains the source for Devnet setup, signed FX, escrow sessions, receipt lookup, online payments, history and Mercado Pago sandbox.
+
+The mobile-backend function auto resumes the existing named sandbox, never exposes keypairs, and forwards only deployment/solana/pix resources. Endpoint routing is cached 30s; financial/FX responses are no-store. Readiness checks runtime/config; each financial engine operation validates genesis/mint/program. Source release installer preserves deployment/key files.
+
+Added bounded reserve amount, Devnet-only test-token recycling between fixed accounts, canonical receipt/hash lookup for offline recovery, and online recovery via memo/ATA delta when a local journal is absent. No program upgrade/mainnet operation. Recovery searches at most 500 signatures and fails closed beyond its window. Regression in packages/solana/test/recovery.test.ts verifies recovery and amount/BRL conflict rejection without sending another transaction.
+
+Mobile evidence in dshimo0/shimo-pay-mobile: R$25 online/offline (4.545455 USDC each), physical offline reload/zero API calls, merchant-only reconnection, replay, 8+8/10, expired session/intent, wrong merchant/signer and tamper. Pix same order QR→approved/accredited by provider, no USDC credit. Payout/conversion simulated. Shared dev accounts, production auth/custody, durable backend/abuse controls and hardware key storage remain outside this demo. Supabase is not required for this path.
+
+Mobile app capability expansion (2026-10-12): /api/pix also accepts cardInitiate/cardStatus for Mercado Pago hosted sandbox checkout. Seller must be Brazilian test_user, redirect sandbox-only, preference binds collector/reference/BRL/amount; payment reconciliation additionally requires live_mode=false and credit_card. Multiple approvals require manual reconciliation. No card data passes through ShimoPay and no fiat/USDC conversion occurs. tests/sdk/card covers these boundaries. Test preference created via live API; no card approval claimed. Credentials are the existing server MP test credentials.

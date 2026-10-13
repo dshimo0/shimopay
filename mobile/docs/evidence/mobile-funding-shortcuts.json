@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-12T21:57:10.807Z",
+  "commit": "b0de9b1",
+  "deployment": "dpl_EAESz8QchkS1KSkqS3zZQV4rc51E",
+  "officialLinks": true,
+  "copy": true,
+  "offlineLinksHidden": true,
+  "mobileOverflow": false,
+  "tests": 50,
+  "e2e": "passed",
+  "typecheck": "passed",
+  "build": "passed",
+  "lint": "0 errors, 8 existing warnings",
+  "scope": "Funding shortcuts only; no faucet visited and no tokens requested by agent"
+}

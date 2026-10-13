@@ -1,0 +1,25 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {Keypair} from '@solana/web3.js';
+import {ed25519} from '@noble/curves/ed25519.js';
+import bs58 from 'bs58';
+import {createSolanaDid,parseSolanaDid,canonicalIntent,signSolanaIntent,verifySolanaIntent,serializeSolanaIntent,deserializeSolanaIntent,randomSolanaId,type SolanaPaymentIntent,type SolanaOfflineSession} from '../src';
+import {ConnectivityGate,encryptSessionKey,decryptSessionKey} from '@shimopay/sdk';
+import {solanaExplorer,SolanaSettlementAdapter} from '../src';
+const key=()=>Keypair.generate().publicKey.toBase58();const seed=crypto.getRandomValues(new Uint8Array(32));const now=Math.floor(Date.now()/1000);
+const s:SolanaOfflineSession={id:key(),owner:key(),sessionSigner:bs58.encode(ed25519.getPublicKey(seed)),reserve:key(),token:key(),maxAmount:'30000000',spentAmount:'0',expiresAt:now+86400,active:true,network:key(),program:key(),sessionId:randomSolanaId(),cachedAt:now,payerDid:'',deviceDid:''};const merchant=key();
+const intent:SolanaPaymentIntent={protocolVersion:2,network:s.network,program:s.program,reserve:s.reserve,allowance:s.id,consumer:s.owner,sessionPublicKey:s.sessionSigner,merchant,currencyMint:s.token,amount:'4545455',nonce:randomSolanaId(),issuedAt:now,expiresAt:now+3600,sequence:'1',displayCurrency:'BRL',displayAmountMinor:'2500',fxQuoteId:randomSolanaId(),deviceIdHash:randomSolanaId()};
+const signed=signSolanaIntent(intent,seed);
+test('Solana DID round-trip and invalid namespace',()=>{assert.deepEqual(parseSolanaDid(createSolanaDid(s.network,s.owner)),{namespace:'solana',network:s.network.slice(0,32),address:s.owner});assert.throws(()=>parseSolanaDid('did:pkh:eip155:1:0x00'));});
+test('canonical message is fixed width and independent of JSON order',()=>{assert.equal(canonicalIntent(intent).length,410);assert.deepEqual(canonicalIntent({...intent,amount:'4545455'}),canonicalIntent(intent));});
+test('Ed25519 offline verification and portable serialization',()=>{assert.equal(verifySolanaIntent(deserializeSolanaIntent(serializeSolanaIntent(signed)),s,merchant,now).valid,true);});
+for(const field of ['amount','merchant','network','program','displayAmountMinor'] as const)test(`tampered ${field} fails signature`,()=>{const value=field==='amount'||field==='displayAmountMinor'?'25000000':key();assert.throws(()=>verifySolanaIntent({...signed,intent:{...intent,[field]:value}},s,merchant,now),/Invalid signature/);});
+test('tampered signature and wrong signer',()=>{const bad={...signed,signature:bs58.encode(new Uint8Array(64))};assert.throws(()=>verifySolanaIntent(bad,s,merchant,now),/signature/);assert.throws(()=>verifySolanaIntent(signed,{...s,sessionSigner:key()},merchant,now),/signature/);});
+test('expiry, merchant binding, local replay and overspend',()=>{assert.throws(()=>verifySolanaIntent(signed,s,merchant,now+3600),/expired/);assert.throws(()=>verifySolanaIntent(signed,s,key(),now),/merchant/);assert.throws(()=>verifySolanaIntent(signed,s,merchant,now,[intent.nonce]),/replay/);assert.throws(()=>verifySolanaIntent(signed,{...s,maxAmount:'1'},merchant,now),/allowance/);});
+test('session encryption round-trip and wrong password',async()=>{const r=await encryptSessionKey('demo-ed25519-secret','demo-password-123');assert(!JSON.stringify(r).includes('demo-ed25519-secret'));assert.equal(await decryptSessionKey(r,'demo-password-123'),'demo-ed25519-secret');await assert.rejects(decryptSessionKey(r,'wrong-password-123'));});
+test('offline gate prevents adapter requests, not just label changes',async()=>{const gate=new ConnectivityGate();gate.setOffline(true);const a=new SolanaSettlementAdapter(gate);await assert.rejects(a.fundDemo(),/Offline/);assert.equal(a.rpcCalls,0);});
+
+test('degenerate Ed25519 public key cannot authenticate a forged offline intent',()=>{const weak=new Uint8Array(32);weak[0]=1;const signature=new Uint8Array(64);signature[0]=1;const forged={version:2 as const,intent:{...intent,sessionPublicKey:bs58.encode(weak)},signature:bs58.encode(signature)};assert.throws(()=>verifySolanaIntent(forged,{...s,sessionSigner:bs58.encode(weak)},merchant,now),/Invalid signature/);});
+
+test('Devnet history Explorer links use the public cluster and encode addresses',()=>{const signature=bs58.encode(new Uint8Array(64).fill(3));const url=new URL(solanaExplorer(signature,'devnet'));assert.equal(url.origin,'https://explorer.solana.com');assert.equal(url.pathname,`/tx/${signature}`);assert.equal(url.searchParams.get('cluster'),'devnet');assert.equal(url.searchParams.has('customUrl'),false);assert.equal(new URL(solanaExplorer(s.owner,'devnet','address')).pathname,`/address/${s.owner}`);});
+test('offline history refresh is blocked before any API request',async()=>{const gate=new ConnectivityGate();gate.setOffline(true);const a=new SolanaSettlementAdapter(gate);await assert.rejects(a.history(),/Offline/);assert.equal(a.rpcCalls,0);});

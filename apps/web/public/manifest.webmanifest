@@ -1,0 +1,1 @@
+{"name": "ShimoPay", "short_name": "ShimoPay", "start_url": "/app", "scope": "/", "display": "standalone", "background_color": "#f5f5ef", "theme_color": "#183f35", "icons": [{"src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]}

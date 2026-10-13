@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-13T00:49:37.467Z",
+  "commit": "38305aa",
+  "root": "https://shimopay-mobile.vercel.app",
+  "pages": [],
+  "errors": [],
+  "consumer": "Perfil cliente\nVisitante · sem conta pessoal conectada\nCarteira BXZsy…T5io4\nCarteira de desenvolvimento compartilhada\nTrocar perfil",
+  "rails": "USDC\nBRL · Pix\nCartão",
+  "overflow": false,
+  "merchant": "Perfil lojista\nVisitante · sem conta pessoal conectada\nCarteira AKHqe…DDZ8N\nCarteira de desenvolvimento compartilhada\nTrocar perfil",
+  "financialMutations": 0
+}

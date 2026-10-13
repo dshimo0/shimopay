@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-12T02:58:01.692Z",
+  "cluster": "devnet",
+  "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+  "signature": "rDBBC5tqR2cjyT5DwpHLPLUrhSvsoXYDD8XQSefjnRNsxHH1Ctfi9znL39D7DMWaoLJV8m8Nkk7axpmMdgYb1LM",
+  "slot": 510119617,
+  "consumerDebit": "4545455",
+  "merchantCredit": "4545455",
+  "walletRpcHistory": true,
+  "confirmed": true,
+  "idempotencyVerifiedInOriginalBrowserRun": true,
+  "historyObservation": "Immediate history cache lagged; reconciled after confirmation/indexing."
+}

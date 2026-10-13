@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-10-12T21:39:46.128Z",
+  "scope": "Recycled existing Circle Devnet tokens between configured test accounts; no mint, no new session",
+  "before": {
+    "balance": "6814541",
+    "merchantBalance": "13185459",
+    "reserveBalance": "6189089",
+    "availableReserve": "2552726",
+    "walletBalance": "625452"
+  },
+  "recycle": {
+    "signature": "66QtTH3ehiKfGY8J6EFChkyyRn1qBx1NwvkTU49NrXG91JxavNHcJ6A7F6krZbYYgwaWLzSYMyoohwRUMqrKLATZ"
+  },
+  "fund": {
+    "signature": "2kGHXb3gbSPuonsJNc7JdAKGtU2hmK1mT2VAQUi11R2YXK7PMnRoZxsRSeqxt99w1oLBtpUxEfcZ5gW56Pe1cNZw"
+  },
+  "after": {
+    "balance": "16814541",
+    "merchantBalance": "3185459",
+    "reserveBalance": "9189089",
+    "availableReserve": "5552726",
+    "walletBalance": "7625452"
+  },
+  "ready": true
+}

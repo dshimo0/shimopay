@@ -1,0 +1,49 @@
+{
+  "name": "shimopay",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "demo": "pnpm build && node --import tsx scripts/demo-solana.ts",
+    "dev": "pnpm --filter @shimopay/web dev",
+    "chain": "solana-test-validator --ledger .solana-ledger --rpc-port 8899",
+    "compile": "pnpm --filter @shimopay/contracts compile",
+    "deploy:local": "node --env-file-if-exists=.env --import tsx scripts/solana-deploy.ts --local",
+    "deploy:sepolia": "node --env-file-if-exists=.env --import tsx scripts/deploy.ts --sepolia",
+    "test": "pnpm test:contracts && pnpm test:protocol && pnpm test:solana",
+    "test:contracts": "pnpm --filter @shimopay/contracts test",
+    "test:protocol": "node --import tsx --test --test-isolation=none packages/protocol/test/*.test.ts packages/sdk/test/*.test.ts",
+    "test:e2e": "playwright test",
+    "lint": "eslint apps packages scripts tests",
+    "typecheck": "tsc --noEmit",
+    "build": "pnpm typecheck && pnpm --filter @shimopay/web build",
+    "test:integration": "node --env-file-if-exists=.env --import tsx scripts/integration.ts",
+    "build:solana": "bash scripts/solana-build.sh",
+    "chain:solana": "solana-test-validator --ledger .solana-ledger --rpc-port 8899",
+    "deploy:solana:local": "node --env-file-if-exists=.env --import tsx scripts/solana-deploy.ts --local",
+    "deploy:solana:devnet": "NODE_USE_ENV_PROXY=1 node --env-file-if-exists=.env --import tsx scripts/solana-deploy.ts",
+    "test:solana": "node --import tsx scripts/solana-test.ts",
+    "chain:evm": "pnpm --filter @shimopay/contracts chain",
+    "deploy:local:evm": "node --env-file-if-exists=.env --import tsx scripts/deploy.ts",
+    "setup:solana": "node --import tsx scripts/solana-init.ts"
+  },
+  "dependencies": {
+    "ethers": "^6.16.0",
+    "zod": "^4.3.0",
+    "idb": "^8.0.3",
+    "@solana/web3.js": "^1.98.4",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/kit": "^5.0.0",
+    "@coral-xyz/anchor": "^0.32.1",
+    "@noble/curves": "^2.0.1",
+    "bs58": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "tsx": "^4.21.0",
+    "@types/node": "^24.0.0",
+    "@playwright/test": "^1.58.0",
+    "eslint": "^9.39.0",
+    "typescript-eslint": "^8.50.0"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-13T01:21:05.448Z",
+  "root": "https://shimopay-mobile.vercel.app",
+  "results": [
+    {
+      "path": "/customer/home",
+      "url": "https://shimopay-mobile.vercel.app/customer/home",
+      "file": "02-customer-home.png",
+      "text": "Pular para o conteúdo\nShimoPay\nPerfil cliente\nVisitante · sem conta pessoal conectada\nCarteira BXZsy…T5io4\nCarteira de desenvolvimento compartilhada\nTrocar perfil\nSUA CARTEIRA\nONLINE\nOlá. Vamos continuar?\nCarteira\nPagar\nHistórico\nMais\n\nCarteira carregada\n\nValor na carteira\nUSDC\n≈ R$ 201,48\n\n36,632722 USDC\n\nEquivalente em BRL · R$ 5,50 / USDC\n\n● Livre\n● Reservado 25%\nVer carteira na Solana\nSaldo consultado 13/10/2026, 01:20:47 · Câmbio 01:20:44\nAtualizar\nFazer pagamento\nAdicionar\nSua reserva offline\n0,0 USDC disponíveis · Preparar agora\nSEU PRIMEIRO PAGAMENTO\nConfira. Autorize. Pronto.\n\nLeia o QR da cobrança e confira o valor. Se ficar sem sinal, use sua reserva offline.\n\nComeçar a pagar\nEntendi\nÚltimos movimentos\nVer todos\nEnviado\nUSDC · Solana · Para AKHqe…DDZ8N\n13/10/2026, 00:34:46\nTaxa: 0,000005 SOL\n−0,181819 USDC\nFinalizada\nRecebido\nUSDC · Solana · De H3sjy…cV79w\n13/10/2026, 00:00:15\n+20,00 USDC\nFinalizada\nEntre carteira e reserva\nUSDC · Solana · Para 6ALcj…9XJWs\n12/10/2026, 21:39:43\nTaxa: 0,000005 SOL\n3,00 USDC\nFinalizada\nAmbiente Sandbox\nAbrir lojista · Apresentação\nPrivacidade\nTermos\nContato\nDetalhes técnicos",
+      "busy": "false",
+      "overflow": false
+    },
+    {
+      "path": "/customer/history",
+      "url": "https://shimopay-mobile.vercel.app/customer/history",
+      "file": "05-customer-history.png",
+      "text": "Pular para o conteúdo\nShimoPay\nPerfil cliente\nVisitante · sem conta pessoal conectada\nCarteira BXZsy…T5io4\nCarteira de desenvolvimento compartilhada\nTrocar perfil\nSUA CARTEIRA\nONLINE\nSua atividade.\nCarteira\nPagar\nHistórico\nMais\n\nCarteira carregada\n\nAtividade da semana\nBRL\n—\nqua.\n—\nqui.\n—\nsex.\n—\nsáb.\n—\ndom.\n—\nseg.\n—\nter.\n\nPagamentos confirmados registrados neste aparelho. Seu primeiro pagamento aparecerá aqui.\n\nHistórico\nAtividade on-chain\nEnviado\nUSDC · Solana · Para AKHqe…DDZ8N\n13/10/2026, 00:34:46\nTaxa: 0,000005 SOL\n−0,181819 USDC\nFinalizada\nRecebido\nUSDC · Solana · De H3sjy…cV79w\n13/10/2026, 00:00:15\n+20,00 USDC\nFinalizada\nEntre carteira e reserva\nUSDC · Solana · Para 6ALcj…9XJWs\n12/10/2026, 21:39:43\nTaxa: 0,000005 SOL\n3,00 USDC\nFinalizada\nRecebido\nUSDC · Solana · De AKHqe…DDZ8N\n12/10/2026, 21:39:41\n+10,00 USDC\nFinalizada\nOperação na rede\n12/10/2026, 20:42:57\nTaxa: 0,000005 SOL\nFinalizada\nOperação na rede\n12/10/2026, 20:42:34\nTaxa: 0,000005 SOL\nFinalizada\nOperação na rede\n12/10/2026, 20:33:03\nTaxa: 0,000005 SOL\nFinalizada\nEnviado\nUSDC · Solana · Para AKHqe…DDZ8N\n12/10/2026, 20:32:45\n−8,00 USDC\nFinalizada\nOperação na rede\n12/10/2026, 20:32:19\nTaxa: 0,000005 SOL\nFinalizada\nEntre carteira e reserva\nUSDC · Solana · Para 6ALcj…9XJWs\n12/10/2026, 20:32:09\nTaxa: 0,000005 SOL\n10,00 USDC\nFinalizada\nRecebido\nUSDC · Solana · De AKHqe…DDZ8N\n12/10/2026, 20:32:06\n+10,00 USDC\nFinalizada\nOperação na rede\n12/10/2026, 20:24:49\nTaxa: 0,000005 SOL\nFinalizada\nEnviado\nUSDC · Solana · Para AKHqe…DDZ8N\n12/10/2026, 20:24:30\n−4,545455 USDC\nFinalizada\nOperação na rede\n12/10/2026, 20:24:10\nTaxa: 0,000005 SOL\nFinalizada\nOperação na rede\n12/10/2026, 20:24:01\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 20:23:50\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 20:23:45\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 20:16:32\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 20:15:39\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 20:14:41\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 20:14:14\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 20:13:55\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 18:28:33\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 17:06:05\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 17:05:08\nTaxa: 0,000005 SOL\nFinalizada\nOperação na rede\n12/10/2026, 02:54:15\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 02:53:06\nTaxa: 0,000005 SOL\nFinalizada\nOperação na rede\n12/10/2026, 02:52:48\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 02:52:39\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 02:52:33\nValor indisponível\nFinalizada\nOperação na rede\n12/10/2026, 02:11:35\nValor indisponível\nFinalizada\nAtualizar\nAmbiente Sandbox\nAbrir lojista · Apresentação\nPrivacidade\nTermos\nContato\nDetalhes técnicos",
+      "busy": "false",
+      "overflow": false
+    },
+    {
+      "path": "/merchant/dashboard",
+      "url": "https://shimopay-mobile.vercel.app/merchant/dashboard",
+      "file": "07-merchant-dashboard.png",
+      "text": "Pular para o conteúdo\nShimoPay\nPerfil lojista\nVisitante · sem conta pessoal conectada\nCarteira AKHqe…DDZ8N\nCarteira de desenvolvimento compartilhada\nTrocar perfil\nSEU NEGÓCIO\nONLINE\nSeu negócio, em movimento.\nCarteira\nCobrar\nReceber\nHistórico\nMais\n\nCarteira carregada\n\nValor na carteira\nUSDC\n≈ R$ 18,52\n\n3,367278 USDC\n\nEquivalente em BRL · R$ 5,50 / USDC\n\n● Livre\n● Reservado 0%\nVer carteira na Solana\nSaldo consultado 13/10/2026, 01:20:59 · Câmbio 01:20:54\nAtualizar\nNova cobrança\nMais opções\nReceber sem sinal\nValidar uma autorização recebida\n0\nConfirmados hoje\n0\nPendentes\n0\nNeste aparelho\nÚltimos movimentos\nVer todos\nRecebido\nUSDC · Solana · De BXZsy…T5io4\n13/10/2026, 00:34:46\n+0,181819 USDC\nFinalizada\nOperação na rede\n13/10/2026, 00:00:15\nFinalizada\nOperação na rede\n12/10/2026, 21:39:43\nFinalizada\nAmbiente Sandbox\nAbrir cliente · Apresentação\nPrivacidade\nTermos\nContato\nDetalhes técnicos",
+      "busy": "false",
+      "overflow": false
+    },
+    {
+      "path": "/pitch",
+      "url": "https://shimopay-mobile.vercel.app/pitch",
+      "file": "11-pitch.png",
+      "text": "ShimoPay\nPT\nEN\n\nSHIMOPAY · APRESENTAÇÃO\n\nA conexão cai.\nO pagamento continua.\n\nVocê autoriza em moeda local. Uma reserva garante o limite. A liquidação acontece em USDC na Solana quando a conexão volta.\n\nVer a jornada completa\nReserve\nAutorize offline\nLiquide na Solana\n\n01 · O PROBLEMA\n\nUma pequena compra não deveria parar por falta de sinal.\n\nPagamentos que dependem de autorização online deixam clientes e lojistas esperando quando a rede falha.\n\n02 · A SOLUÇÃO\n\nSepare a autorização da liquidação.\n\nUma sessão conecta identidade, chave do aparelho, reserva e limites. O cliente assina no aparelho; o lojista verifica e liquida quando estiver online.\n\n03 · A EXPERIÊNCIA\n\nR$25 no caixa. USDC na liquidação.\n\nO cliente vê reais. O valor em USDC é definido antes da assinatura. Basta o lojista reconectar; o cliente pode continuar offline.\n\n04 · A PROVA\n\n4,545455 USDC, com comprovante verificável.\n\nUma compra de R$25, à cotação de R$5,50 por USDC, foi autorizada offline e liquidada na Solana Devnet.\n\n05 · OS LIMITES\n\nRisco limitado por reserva e prazo.\n\nAssinatura, destinatário, validade e saldo são verificados. Lojistas isolados ainda podem aceitar autorizações conflitantes; aceitar offline não equivale a receber uma liquidação final.\n\n06 · OS MEIOS\n\nUma experiência, meios diferentes.\n\nUSDC liquida na Solana. Pix e cartão usam o Mercado Pago Sandbox online. Conversão automática para reais e repasse bancário ainda não estão disponíveis.\n\n07 · EXECUÇÃO\n\nExperiência em identidade e segurança.\n\nO fundador relata 25 anos em segurança, mais de 24 projetos de gestão de identidade e mais de 2 milhões de identidades gerenciadas.\n\n08 · VALIDAÇÃO\n\nDa prova técnica ao uso por lojistas.\n\nO próximo marco é validar o uso com pequenos lojistas e estruturar contas individuais. Não há piloto ou receita declarados nesta apresentação.\n\nConferir a transação na Solana\nAmbiente Sandbox · shimopay@pm.me",
+      "busy": null,
+      "overflow": false
+    },
+    {
+      "path": "/nao-existe",
+      "url": "https://shimopay-mobile.vercel.app/nao-existe",
+      "file": "19-nao-existe.png",
+      "text": "ShimoPay\nAbrir app\nPÁGINA NÃO ENCONTRADA\nVamos voltar para o caminho certo.\n\nEste endereço não está disponível. Você pode continuar pela carteira ou voltar ao início.\n\nAbrir carteira\nVoltar ao início",
+      "busy": null,
+      "overflow": false
+    },
+    {
+      "path": "/customer/home",
+      "desktop": true,
+      "overflow": false
+    },
+    {
+      "path": "/merchant/dashboard",
+      "desktop": true,
+      "overflow": false
+    },
+    {
+      "path": "/pitch",
+      "desktop": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

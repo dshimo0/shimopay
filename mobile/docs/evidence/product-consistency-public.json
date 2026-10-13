@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-13T01:01:30.405Z",
+  "commit": "d4d0912",
+  "root": "https://shimopay-mobile.vercel.app",
+  "pages": [
+    {
+      "path": "/",
+      "overflow": false
+    },
+    {
+      "path": "/privacidade",
+      "overflow": false
+    },
+    {
+      "path": "/termos",
+      "overflow": false
+    },
+    {
+      "path": "/customer/stores",
+      "overflow": false
+    },
+    {
+      "path": "/merchant/miniapps",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "validation": "Cole um endereço de sessão válido, compartilhado pelo cliente. Você também pode ler o QR do pagamento.\nCole um endereço de sessão válido, compartilhado pelo cliente. Você também pode ler o QR do pagamento."
+}

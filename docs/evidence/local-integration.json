@@ -1,0 +1,24 @@
+{
+  "kind": "local-integration",
+  "chainId": 31337,
+  "token": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "sessionId": "0x2efbe2224146936ea446a94acd6d0fe799db3041fd0ed3434a386a6806031e27",
+  "settlementHash": "0x0f5550f1aae2c75e1e8207200171d6f89cf44960c701fe5d2e72e50782787245",
+  "receiptStatus": 1,
+  "gasUsed": "152130",
+  "feeWei": "76532005631400",
+  "merchantReceivedMicroUsdc": "8000000",
+  "tests": {
+    "offlineGate": "passed",
+    "offlineVerification": "passed",
+    "settlement": "passed",
+    "replay": "rejected",
+    "overspend": "rejected",
+    "expired": "rejected",
+    "wrongMerchant": "rejected",
+    "tamper": "invalid signature",
+    "cancel": "passed"
+  },
+  "executedAt": "2026-10-11T03:57:37.014Z"
+}

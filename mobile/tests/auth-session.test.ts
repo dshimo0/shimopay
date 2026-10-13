@@ -1,0 +1,10 @@
+import {test,expect,afterEach} from 'vitest';
+// Server validation must call Supabase, never authorize by decoding a JWT payload.
+import {verifyUser} from '../api/auth-session.mjs';
+const original={url:process.env.VITE_SUPABASE_URL,key:process.env.VITE_SUPABASE_PUBLISHABLE_KEY};
+afterEach(()=>{if(original.url===undefined)delete process.env.VITE_SUPABASE_URL;else process.env.VITE_SUPABASE_URL=original.url;if(original.key===undefined)delete process.env.VITE_SUPABASE_PUBLISHABLE_KEY;else process.env.VITE_SUPABASE_PUBLISHABLE_KEY=original.key;});
+const request={headers:{authorization:'Bearer fake-token-for-verification'}};
+test('missing configuration refuses login; no fake success',async()=>{delete process.env.VITE_SUPABASE_URL;const r=await verifyUser(request,()=>{throw new Error('No network expected');});expect(r.status).toBe(503);});
+test('a forged bearer cannot authenticate when provider rejects it',async()=>{process.env.VITE_SUPABASE_URL='https://fixture.supabase.co';process.env.VITE_SUPABASE_PUBLISHABLE_KEY='sb_publishable_fixture';const r=await verifyUser(request,async()=>Response.json({}, {status:401}));expect(r.status).toBe(401);});
+test('unconfirmed email fails; verified identity exposes only id/email',async()=>{process.env.VITE_SUPABASE_URL='https://fixture.supabase.co';process.env.VITE_SUPABASE_PUBLISHABLE_KEY='sb_publishable_fixture';const pending=await verifyUser(request,async()=>Response.json({id:'user',email:'fixture@example.invalid'}));expect(pending.status).toBe(401);const verified=await verifyUser(request,async()=>Response.json({id:'user',email:'fixture@example.invalid',email_confirmed_at:'2026-10-12',secret:'must-not-return'}));expect(verified).toEqual({status:200,data:{id:'user',email:'fixture@example.invalid'}});});
+test('secret API keys are refused before any request',async()=>{process.env.VITE_SUPABASE_URL='https://fixture.supabase.co';process.env.VITE_SUPABASE_PUBLISHABLE_KEY='sb_secret_do-not-send';expect((await verifyUser(request,()=>{throw new Error('No network expected');})).status).toBe(503);});

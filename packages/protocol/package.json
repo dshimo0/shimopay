@@ -1,0 +1,1 @@
+{"name":"@shimopay/protocol","private":true,"type":"module","exports":"./src/index.ts","dependencies":{"ethers":"^6.16.0","zod":"^4.3.0"}}

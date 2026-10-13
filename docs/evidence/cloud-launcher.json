@@ -1,0 +1,9 @@
+{
+  "verifiedAt": "2026-10-11T17:17:18Z",
+  "entryUrl": "https://shimopay-demo.vercel.app",
+  "deploymentId": "dpl_AtmE2QRir8VHTBUwExA8zM1RvXbQ",
+  "startStatus": 200,
+  "stopResumeStatus": 200,
+  "sessionMinutes": 45,
+  "sandbox": "shimopay-resumable-demo"
+}

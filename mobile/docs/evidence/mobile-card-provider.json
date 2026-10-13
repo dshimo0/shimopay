@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-12T22:38:42.976Z",
+  "http": 200,
+  "requestId": "54b373bc-0635-4cb8-9304-d68a2e866f12",
+  "id": "3758554144-2a8ec286-8814-41fc-8b72-bfeadd27bd57",
+  "amountMinor": 2500,
+  "currency": "BRL",
+  "rail": "mercadopago-card-test",
+  "url": "https://sandbox.mercadopago.com.br/checkout/v1/redirect?pref_id=3758554144-2a8ec286-8814-41fc-8b72-bfeadd27bd57",
+  "status": "pending",
+  "scope": "Test seller verified; creates hosted sandbox preference only. No card charge or approval claimed.",
+  "reconciliation": {
+    "http": 200,
+    "id": "3758554144-2a8ec286-8814-41fc-8b72-bfeadd27bd57",
+    "requestId": "54b373bc-0635-4cb8-9304-d68a2e866f12",
+    "amountMinor": 2500,
+    "currency": "BRL",
+    "rail": "mercadopago-card-test",
+    "status": "pending"
+  }
+}

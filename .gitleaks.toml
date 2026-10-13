@@ -1,0 +1,7 @@
+title = "ShimoPay competition source scan"
+[extend]
+useDefault = true
+[[allowlists]]
+description = "Reviewed public local contract address and fixture idempotency UUIDs; not credentials"
+regexTarget = "secret"
+regexes = ['^0x5FbDB2315678afecb367f032d93F642f64180aa3$', '^16d3c8d8-e436-412c-9a4e-99d793e65a92$', '^b1c7a2ca-0c26-414e-b7aa-2bc7bd1569c0$']

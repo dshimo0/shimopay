@@ -1,0 +1,33 @@
+{
+  "review": "competition-source",
+  "mobileUnitTests": 68,
+  "protocolSdkTests": 34,
+  "solanaProtocolRailTests": 22,
+  "mobileE2EPassed": 10,
+  "mobileE2ESkipped": 1,
+  "mobileLintErrors": 0,
+  "mobileLintWarnings": 8,
+  "typecheck": "passed",
+  "mobileBuild": "passed",
+  "protocolBuild": "passed",
+  "secretScan": {
+    "tool": "gitleaks 8.30.1",
+    "remainingFindings": 0,
+    "reviewedExactFixtureExceptions": 3
+  },
+  "dependencyAudit": {
+    "mobile": {
+      "high": 6,
+      "critical": 0,
+      "rootCause": "braces; build toolchain; no patch published"
+    },
+    "protocol": {
+      "high": 3,
+      "moderate": 4,
+      "critical": 0
+    }
+  },
+  "newFinancialTransactions": false,
+  "solanaProgramIntegrationRerun": false,
+  "legacyEvmTests": 20
+}

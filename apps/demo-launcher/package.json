@@ -1,0 +1,6 @@
+{
+  "name": "@shimopay/demo-launcher",
+  "private": true,
+  "type": "module",
+  "dependencies": { "@vercel/sandbox": "3.3.0" }
+}

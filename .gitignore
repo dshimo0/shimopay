@@ -1,0 +1,27 @@
+node_modules/
+.vercel/
+.next/
+.env
+.env.*
+!.env.example
+packages/contracts/cache/
+packages/contracts/artifacts/
+coverage/
+playwright-report/
+test-results/
+apps/web/public/deployment*.json
+.tooling/
+.solana/
+target/
+.solana-ledger/
+.pnpm-store/
+
+# Competition checkout: never publish generated artifacts or secrets
+**/dist/
+**/.next/
+**/node_modules/
+**/.vercel/
+**/.solana/
+**/target/
+*.pem
+*.key

@@ -1,0 +1,35 @@
+import {chromium,expect} from '@playwright/test';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash,X509Certificate} from 'node:crypto';
+const root=process.env.SHIMOPAY_APP_URL;if(!root||!(root.startsWith('https://')||root==='http://127.0.0.1:3000'))throw new Error('Set SHIMOPAY_APP_URL');
+const pins=await Promise.all((process.env.SHIMOPAY_BROWSER_CA_FILES??'').split(',').filter(Boolean).map(async path=>createHash('sha256').update(new X509Certificate(await readFile(path)).publicKey.export({format:'der',type:'spki'})).digest('base64')));
+const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox',...(pins.length?[`--ignore-certificate-errors-spki-list=${pins.join(',')}`]:[])],proxy:process.env.HTTPS_PROXY&&root.startsWith('https://')?{server:process.env.HTTPS_PROXY}:undefined});
+const context=await browser.newContext({viewport:{width:390,height:844},locale:'pt-BR'});const page=await context.newPage();
+try{
+ await page.goto(root+'/app');await expect(page.getByRole('heading',{name:'Minha carteira',exact:true})).toBeVisible();await expect(page.getByRole('status')).toContainText('Carteira de teste conectada',{timeout:60000});
+ await expect(page.getByRole('region',{name:'Consumer'})).toBeVisible();await expect(page.getByRole('region',{name:'Merchant'})).toBeHidden();
+ await expect(page.getByRole('button',{name:'Start 90-second demo'})).toBeHidden();await expect(page.getByRole('button',{name:'Simular offline'})).toBeHidden();
+ await page.getByRole('button',{name:'Pagar',exact:true}).click();await expect(page.getByLabel('Valor em BRL',{exact:true}).first()).toBeVisible();await expect(page.getByRole('button',{name:'Pagar online on-chain'})).toBeVisible();
+ await page.getByRole('button',{name:'Configuração offline',exact:true}).first().click();await expect(page.getByLabel('Senha da carteira offline (10+ caracteres)')).toBeVisible();
+ await page.getByRole('button',{name:'Transações',exact:true}).first().click();await expect(page.getByRole('region',{name:'Transaction history'})).toBeVisible();
+ await page.getByRole('button',{name:'Início',exact:true}).click();await page.screenshot({path:'docs/evidence/app-wallet-mobile.png',fullPage:true});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+ await page.goto(root+'/app/merchant');await expect(page.getByRole('heading',{name:'Meu negócio',exact:true})).toBeVisible();
+ await expect(page.getByRole('region',{name:'Consumer'})).toBeHidden();await expect(page.getByRole('region',{name:'Merchant'})).toBeVisible();
+ await page.locator('.app-nav').getByRole('button',{name:'Cobrar',exact:true}).click();await expect(page.getByLabel('Valor em BRL',{exact:true}).last()).toBeVisible();
+ await expect(page.locator('.product-merchant .identity .did').first()).toContainText('did:pkh',{timeout:30000});
+ await page.getByRole('button',{name:'Atualizar cotação',exact:true}).click();await expect(page.locator('.card.charge').getByRole('button',{name:'Cobrar',exact:true})).toBeEnabled({timeout:30000});
+ await page.locator('.card.charge').getByRole('button',{name:'Cobrar',exact:true}).click();await expect(page.getByAltText('Merchant invoice QR')).toBeVisible();
+ const invoice=await page.locator('.card.charge code.did').textContent();if(!invoice)throw new Error('Invoice not exported');expect(JSON.parse(invoice).amountMinor).toBe('2500');
+ await page.locator('.app-nav').getByRole('button',{name:'Receber pagamento',exact:true}).click();await expect(page.locator('#payload')).toBeVisible();await expect(page.getByRole('button',{name:/Liquidar agora/})).toBeVisible();
+ await page.screenshot({path:'docs/evidence/app-merchant-mobile.png',fullPage:true});
+ await page.goto(root+'/app');await expect(page.getByRole('heading',{name:'Minha carteira',exact:true})).toBeVisible();
+ await page.evaluate(async()=>{await navigator.serviceWorker.ready;});await expect.poll(()=>page.evaluate(()=>Boolean(navigator.serviceWorker.controller))).toBe(true);
+ await context.setOffline(true);await page.reload();await expect(page.getByRole('heading',{name:'Minha carteira',exact:true})).toBeVisible();await expect(page.locator('header .badge.offline')).toBeVisible();
+ await page.locator('.app-nav').getByRole('button',{name:'Pagar',exact:true}).click();await expect(page.getByRole('button',{name:'Pagar online on-chain'})).toBeDisabled();
+ await page.getByText('Importar cobrança',{exact:true}).click();await page.locator('#invoice-request').fill(invoice);await page.getByRole('button',{name:'Revisar cobrança',exact:true}).click();await expect(page.getByRole('button',{name:'Pagar offline',exact:true})).toBeVisible();
+ await page.locator('#invoice-request').fill(JSON.stringify({...JSON.parse(invoice),expiresAt:1}));await page.getByRole('button',{name:'Revisar cobrança',exact:true}).click();await expect(page.getByRole('status')).toContainText('Invoice merchant or expiry is invalid');
+ await context.setOffline(false);
+ const evidence={root,checkedAt:new Date().toISOString(),consumerSingleView:true,merchantSingleView:true,consumerNavigation:true,merchantNavigation:true,settlementActionVisible:true,mobileOverflow:false,realOfflineReload:true,onlinePaymentDisabledOffline:true,invoiceQrCreated:true,invoiceImportedOffline:true,expiredInvoiceRejected:true,financialMutations:false};
+ await writeFile('docs/evidence/app-ux-cloud.json',JSON.stringify(evidence,null,2)+'\n');console.log(JSON.stringify(evidence));
+}finally{await browser.close();}

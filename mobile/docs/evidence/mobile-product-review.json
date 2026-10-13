@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-12T21:50:17.067Z",
+  "commit": "bb43da0",
+  "deployment": "dpl_4qeqdwmTDRVa7wfgrEYfMXdt2zKb",
+  "equivalentBrl": "R$ 92,48",
+  "walletExplorer": true,
+  "desktopOverflow": false,
+  "mobileOverflow": false,
+  "landingOverflow": false,
+  "offlineReloadPreservesCachedBalance": true,
+  "pageErrors": [],
+  "checks": {
+    "unit": 50,
+    "e2e": "Offline signature, isolated merchant settlement and confirmed receipt/Explorer passed",
+    "lint": "0 errors; 8 preexisting warnings",
+    "typecheck": "passed",
+    "build": "passed"
+  },
+  "scope": "Public read-only UI/PWA checks. BRL is USDC equivalent, not a fiat deposit. Local chart includes only recorded confirmed payments. Card checkout and commercial miniapp checkout not implemented.",
+  "finalLanding": {
+    "checkedAt": "2026-10-12T21:52:59.918Z",
+    "commit": "0e918b0",
+    "deployment": "dpl_B8btHHSzPA8f6GscL41Mhrk2XbcK",
+    "verifiedPaymentExplorerLink": true,
+    "mobileOverflow": false
+  }
+}

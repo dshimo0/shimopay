@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-12T20:24:46.524Z",
+  "root": "https://shimopay-mobile.vercel.app",
+  "cluster": "devnet",
+  "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+  "before": {
+    "balance": "13905451",
+    "merchantBalance": "6094549",
+    "reserveBalance": "3734544",
+    "availableReserve": "98181",
+    "walletBalance": "10170907"
+  },
+  "after": {
+    "balance": "4814541",
+    "merchantBalance": "15185459",
+    "reserveBalance": "4189089",
+    "availableReserve": "98181",
+    "walletBalance": "625452"
+  },
+  "sessionId": "GZByc1CSGmPq4SMBAjeATi4pZeKvQRWfJgPMUyEJazge",
+  "displayAmountMinor": "2500",
+  "settlementAmountEach": "4545455",
+  "onlineExplorer": "https://explorer.solana.com/tx/3Su49qV7uDBHQPHVukeWKwKvH3PG41T8wyfQhvdGX9QRBrGtvghiEb3xXv6EXLWQzJYcPeULxGdvzgsNhyoqUE27?cluster=devnet",
+  "offlineSignature": "3H5KGjwctHH4bcU2ePEo8g8RZYRbo9AMUM1pDNxcSoeFNdr2Hv5QW2MneG3j5Q1HHJKfYfmHMGYCAtxMJ4LwB47p",
+  "confirmedAt": 1791836670,
+  "offlinePwaReload": true,
+  "independentMerchant": true,
+  "payerStillOfflineAtSettlement": true,
+  "offlineApiRequests": 0,
+  "replayRejected": true,
+  "pageErrors": [],
+  "scope": "Live R$25 online and offline demo with recycled configured test USDC"
+}

@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-10-12T20:33:02.013Z",
+  "session": "4ebjzXvMTmRCgs1onuenCGZyUhMcG98qQN3U5V1zw31w",
+  "maxAmount": "10000000",
+  "amounts": [
+    "8000000",
+    "8000000"
+  ],
+  "bothAcceptedOffline": true,
+  "firstConfirmed": {
+    "status": "settled",
+    "signature": "468X3Lmr4DzvWRsRVKFgeEXfLo7Ey9irwov9tNQtoTmnogF6N54jfizp8Y2e3uCV5SMZPrMyGDwTNXYZw9t95gM7",
+    "confirmedAt": 1791837165
+  },
+  "secondRejected": true,
+  "expiredRejected": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 2: custom program error: 0x1774. \nLogs: \n[\n  \"Program log: CreateIdempotent\",\n  \"Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4338 of 403000 compute units\",\n  \"Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success\",\n  \"Program 9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg invoke [1]\",\n  \"Program log: Instruction: Settle\",\n  \"Program 11111111111111111111111111111111 invoke [2]\",\n  \"Program 11111111111111111111111111111111 success\",\n  \"Program log: AnchorError thrown in programs/shimopay/src/lib.rs:46. Error Code: Expired. Error Number: 6004. Error Message: Intent or allowance expired.\",\n  \"Program 9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg consumed 17189 of 398662 compute units\",\n  \"Program 9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg failed: custom program error: 0x1774\"\n]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.",
+  "wrongMerchantRejected": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 2: custom program error: 0x1777. \nLogs: \n[\n  \"Program log: Instruction: Settle\",\n  \"Program 11111111111111111111111111111111 invoke [2]\",\n  \"Program 11111111111111111111111111111111 success\",\n  \"Program log: AnchorError thrown in programs/shimopay/src/lib.rs:50. Error Code: WrongMerchant. Error Number: 6007. Error Message: Wrong merchant.\",\n  \"Program log: Left:\",\n  \"Program log: BXZsykJqowbQGSsWv8o4u7g5qjZLKgGwAm5ibgbT5io4\",\n  \"Program log: Right:\",\n  \"Program log: AKHqepJYQZf8eb5ViSZhzEpY2DigGmGSkvA3M1qDDZ8N\",\n  \"Program 9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg consumed 17712 of 398662 compute units\",\n  \"Program 9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg failed: custom program error: 0x1777\"\n]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.",
+  "wrongSignerRejected": "Simulation failed. \nMessage: Transaction simulation failed: Error processing Instruction 2: custom program error: 0x1773. \nLogs: \n[\n  \"Program log: Instruction: Settle\",\n  \"Program 11111111111111111111111111111111 invoke [2]\",\n  \"Program 11111111111111111111111111111111 success\",\n  \"Program log: AnchorError thrown in programs/shimopay/src/lib.rs:49. Error Code: WrongSessionKey. Error Number: 6003. Error Message: Wrong session key.\",\n  \"Program log: Left:\",\n  \"Program log: 4mo8LCCZJokiUAqFpzT2YUXNFYBLAt64dxoPsoqoegMA\",\n  \"Program log: Right:\",\n  \"Program log: ESRdms5wMxmKjWW83GoT9521Uv9jxTFRSt6XSknuN6QF\",\n  \"Program 9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg consumed 19200 of 398662 compute units\",\n  \"Program 9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg failed: custom program error: 0x1773\"\n]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.",
+  "tamperedRejected": true,
+  "before": {
+    "balance": "4814541",
+    "merchantBalance": "15185459",
+    "reserveBalance": "4189089",
+    "availableReserve": "552726",
+    "walletBalance": "625452"
+  },
+  "attackBefore": {
+    "balance": "14814541",
+    "merchantBalance": "5185459",
+    "reserveBalance": "14189089",
+    "availableReserve": "552726",
+    "walletBalance": "625452"
+  },
+  "after": {
+    "balance": "6814541",
+    "merchantBalance": "13185459",
+    "reserveBalance": "6189089",
+    "availableReserve": "552726",
+    "walletBalance": "625452"
+  },
+  "scope": "Real Circle USDC Devnet; configured test accounts; explicit attacker fixtures"
+}

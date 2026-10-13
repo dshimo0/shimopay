@@ -1,0 +1,14 @@
+{
+  "url": "https://sb-3ep2qj5yh459.vercel.run/demo",
+  "checkedAt": "2026-10-12T06:13:30.375Z",
+  "providerApi": "orders",
+  "id": "ORDTST01M4QBX1YHHZ85T74RSDNTPBDH",
+  "status": "pending",
+  "statusDetail": "in_process",
+  "amountMinor": 10000,
+  "qrReturned": false,
+  "qrImageVisible": false,
+  "idempotentRetry": true,
+  "realMoney": false,
+  "usdcConversion": "not performed"
+}

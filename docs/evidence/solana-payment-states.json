@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-12T02:53:05.248Z",
+  "url": "https://sb-3ep2qj5yh459.vercel.run/demo",
+  "cluster": "devnet",
+  "signature": "4P65dUVHm4UEo5hf7Hmis1XkEUFbmUXXU4bkii4tY2tdLcK5gwVJjRezc74vToZeYomh311eJkzdQypTukxGPauZ",
+  "offlineAuthorizationVisible": true,
+  "pendingSettlementVisibleBeforeSubmission": true,
+  "noHashBeforeConfirmation": true,
+  "confirmedOnChainVisible": true,
+  "authorizationAcceptanceConfirmationTimesVisible": true,
+  "offlineApiRequests": 0
+}

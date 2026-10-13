@@ -1,0 +1,8 @@
+{
+  "executedAt": "2026-10-11T21:08:38.657Z",
+  "signature": "5tLYofQJY5zBq8NWHm6LhfybN1HiwZCCUz51jUe5AXpud4tgc4A4w2iafzPFDBhtNcXLkQqdLg3EMuKghnaTv129",
+  "offlineApiRequests": 0,
+  "merchantTokens": "4545455",
+  "replay": "rejected",
+  "tamper": "invalid signature"
+}

@@ -1,0 +1,11 @@
+{
+  "executedAt": "2026-10-11T06:27:39.268Z",
+  "url": "https://sb-32ei6omrroct.vercel.run/demo",
+  "chainId": 31337,
+  "txHash": "0xf341a3fe4a3ed3d416e7823b4504be806778a5f53a6fca9b7c1152240874a6be",
+  "receiptStatus": "0x1",
+  "offlineApiRequests": 0,
+  "settlementMicroUsdc": "4545455",
+  "replay": "rejected",
+  "tamper": "invalid signature"
+}

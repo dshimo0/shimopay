@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-13T00:35:14.918Z",
+  "commit": "92f70f9",
+  "root": "https://shimopay-mobile.vercel.app",
+  "pages": [],
+  "errors": [],
+  "layout": {
+    "scrollTop": 0,
+    "header": "sticky",
+    "headerTop": 36.765625,
+    "dialogTop": 33.765625
+  },
+  "receipt": {
+    "signature": "3uqxYfseTTfLkUBDFgbj8Df7T2ykLAphyzdAuPGDpV9VUGydAQfafSF1eRCmZvocc1Sf5n59MSJEhemnM8UofvEt",
+    "network": "devnet",
+    "status": "finalized",
+    "slot": 510437414,
+    "blockTime": 1791849615,
+    "feeLamports": "12209",
+    "feePayer": "99TfgApJDd6WSpVq5wBhbwqieoFYs4buzv8p9Uv5monw",
+    "transfers": [
+      {
+        "source": "6D2ZmPSpbtqPFuze1GKvhtEwJnrP9FpCvQXvQe9t6HQ8",
+        "destination": "FvVszsn4usFHJ1aKaSLPZ9CisaFgc1KjzUE6Vi3sxG5J",
+        "sourceOwner": "H3sjyipQtXAJkvWNkXhDgped7k323kAba8QMwCLcV79w",
+        "destinationOwner": "BXZsykJqowbQGSsWv8o4u7g5qjZLKgGwAm5ibgbT5io4",
+        "amount": "20000000",
+        "decimals": 6,
+        "asset": "USDC",
+        "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU"
+      }
+    ],
+    "checkedAt": 1791851723,
+    "detailsAvailable": true,
+    "executionFailed": false
+  },
+  "httpStatus": 200,
+  "overflow": false,
+  "deployment": "dpl_GxPvZXxS7ko72C7sKvYk3hHYgrPF",
+  "scope": "Read-only public verification against actual Devnet transaction; no funds moved."
+}

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-12T22:44:58.198Z",
+  "commit": "5817ba5",
+  "deployment": "dpl_9M3jhCZvCSLxojYWRVKybmvcQvzB",
+  "backendDeployment": "dpl_GU3M545mZnguM6FMBkg9BkPRuzWC",
+  "authMissingConfigurationRefusesLogin": true,
+  "qrCameraUi": true,
+  "locationUi": true,
+  "cashUi": true,
+  "cardStatus": "pending via live provider query",
+  "cardCheckout": "verified sandbox URL",
+  "mobileOverflow": false,
+  "pageErrors": [],
+  "tests": {
+    "mobileUnit": 55,
+    "sdkPixCard": 12,
+    "browserE2e": 3,
+    "lint": "0 errors / 8 legacy warnings",
+    "typecheck": "passed",
+    "build": "passed"
+  },
+  "limitations": [
+    "Supabase activation/individual ownership blocked",
+    "Camera/GPS hardware not verified; browser media/geolocation tested",
+    "Cash local/manual, not authenticated cloud ledger",
+    "Card approval not performed"
+  ]
+}

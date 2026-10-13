@@ -1,0 +1,14 @@
+[toolchain]
+anchor_version = "0.32.1"
+[features]
+resolution = true
+skip-lint = false
+[programs.localnet]
+shimopay_solana = "9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg"
+[programs.devnet]
+shimopay_solana = "9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg"
+[provider]
+cluster = "devnet"
+wallet = ".solana/deployer.json"
+[scripts]
+test = "pnpm test:solana"

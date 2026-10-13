@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-11T17:59:17.063Z",
+  "cluster": "devnet",
+  "rpc": "https://api.devnet.solana.com",
+  "genesis": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1wcaWoxPkrZBG",
+  "deployer": "9mhC1YCwDzPqK72kkafKJRmnG6dEffFsazCtMzcB2t4q",
+  "testSolLamports": 0,
+  "program": "9iWAPSp9p9mbQ7LouMZEdt3qhtpnZGiaSyoCBSXDPYKg",
+  "programDeployed": false,
+  "status": "blocked: test SOL faucet returned 429; no Devnet signatures fabricated"
+}

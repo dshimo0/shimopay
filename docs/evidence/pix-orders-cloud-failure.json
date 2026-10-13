@@ -1,0 +1,6 @@
+{
+  "url": "https://sb-3ep2qj5yh459.vercel.run/demo",
+  "checkedAt": "2026-10-12T06:14:24.401Z",
+  "qrVisible": false,
+  "reason": "expect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate"
+}

@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-11T20:35:47.015Z",
+  "url": "http://127.0.0.1:3000/pitch",
+  "http": 200,
+  "header": true,
+  "footer": true,
+  "desktopNoOverflow": true,
+  "mobileNoOverflow": true,
+  "pdfExport": true,
+  "claimQualifiersVisible": true,
+  "staticLauncherFailureRecoveryTested": false
+}

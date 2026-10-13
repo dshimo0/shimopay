@@ -1,0 +1,12 @@
+{
+  "productionUrl": "https://shimopay-demo.vercel.app",
+  "deploymentId": "dpl_ACuz1KW5A2km2qzPaR9Q5LyJY6WU",
+  "sandbox": "shimopay-solana-demo",
+  "url": "https://sb-3ep2qj5yh459.vercel.run/demo",
+  "sessionMinutes": 45,
+  "explicitStopAndResume": "passed: HTTP 200 with Solana state probe",
+  "snapshot": "snap_haSIH2sprLRTThuqtaVSIXTPtaIq",
+  "observedSnapshotRetentionDays": 30,
+  "cluster": "localnet",
+  "devnetStatus": "not deployed: test SOL missing"
+}
