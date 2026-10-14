@@ -1,8 +1,11 @@
 import {readdir,writeFile,readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 const files=await readdir('dist/assets');
-const version=createHash('sha256').update(files.join(',')).digest('hex').slice(0,16);
-const assets=['/index.html','/manifest.webmanifest','/brand/app-icon.png',...files.map(f=>`/assets/${f}`)];
+const branding=['index.html','manifest.webmanifest','favicon.svg','favicon.ico','brand/app-icon.png','brand/apple-touch-icon.png'];
+const hash=createHash('sha256').update(files.join(','));
+for(const file of branding)hash.update(await readFile(`dist/${file}`));
+const version=hash.digest('hex').slice(0,16);
+const assets=[...branding.map(file=>`/${file}`),...files.map(f=>`/assets/${f}`)];
 const sw=`const CACHE='shimopay-mobile-${version}';const ASSETS=${JSON.stringify(assets)};
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('shimopay-mobile-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});

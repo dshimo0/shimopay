@@ -110,3 +110,5 @@ Revisadas 19 rotas públicas e aliases. Corrigidos onboarding, 404, pitch, copy 
 Na inspeção pública UX-12, corrigidos também o estado vazio indevido junto de atividade on-chain e a cor dos links de ação no pitch/404. Verificação visual final será recapturada na publicação.
 
 UX-12 publicado em https://shimopay-mobile.vercel.app (0a33302). Revisão visual e inventário de 19 rotas públicos em docs/PRODUCT_REVIEW.md; 68 unitários, 10 E2E distintos, lint/typecheck/build aprovados. Ajustes finais de contraste e estado vazio também passaram no teste responsivo completo. Login individual/PIN permanecem fora do resultado entregue.
+
+UX-13: substituição do favicon legado por ShimoPay; ícones e metadados entram na versão de cache da PWA. Busca textual sem referências à ferramenta de origem.
