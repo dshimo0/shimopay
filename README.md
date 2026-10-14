@@ -8,6 +8,8 @@ A payment app that authorizes limited payments offline and settles Circle test U
 
 ![ShimoPay wallet](mobile/docs/evidence/review-after/02-customer-home.png)
 
+**Slide decks:** [PDF Português](https://shimopay-mobile.vercel.app/shimopay-pitch-pt-br.pdf) · [PDF English](https://shimopay-mobile.vercel.app/shimopay-pitch-en-us.pdf)
+
 ## What to evaluate
 
 - Customer and merchant experiences, balances, QR exchange and transaction receipts.
